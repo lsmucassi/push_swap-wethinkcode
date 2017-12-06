@@ -6,7 +6,7 @@
 /*   By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 15:23:52 by lmucassi          #+#    #+#             */
-/*   Updated: 2017/12/01 12:46:57 by lmucassi         ###   ########.fr       */
+/*   Updated: 2017/12/06 13:57:24 by lmucassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int		ft_push(t_stack **src, t_stack **dst)
 	{
 		(*dst) = (*src);
 		(*src) = head->next;
-		(*dst) = temp;
+		(*dst)->next = temp;
 	}
 	else
 	{

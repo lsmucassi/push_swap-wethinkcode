@@ -6,7 +6,7 @@
 /*   By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 14:35:55 by lmucassi          #+#    #+#             */
-/*   Updated: 2017/12/01 13:23:47 by lmucassi         ###   ########.fr       */
+/*   Updated: 2017/12/06 16:42:10 by lmucassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,7 @@ int			ft_rev_rotate(t_stack **s);
 int			ft_rotate(t_stack **s);
 int			ft_push(t_stack **src, t_stack **dst);
 int			ft_asort(t_stack *a);
+int			is_maxint(char *org, char *num);
+int			is_dup(t_stack	*a);
 
 #endif

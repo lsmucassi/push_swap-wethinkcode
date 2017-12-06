@@ -6,7 +6,7 @@
 /*   By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 14:43:41 by lmucassi          #+#    #+#             */
-/*   Updated: 2017/12/01 13:53:12 by lmucassi         ###   ########.fr       */
+/*   Updated: 2017/12/06 15:59:22 by lmucassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,9 @@ void	ft_printer(t_stack *a, t_stack *b)
 	a_head = a;
 	b_head = b;
 	write(1, "a", 1);
-	write(1, "  ", 2);
+	write(1, " --- ", 5);
 	write(1, "b\n", 2);
+	write(1, "========\n", 9);
 	while (a != NULL || b != NULL)
 	{
 		if (a != NULL)
@@ -35,13 +36,15 @@ void	ft_printer(t_stack *a, t_stack *b)
 			write(1, " ", 1);
 		if (b != NULL)
 		{
-			ft_putstr("\t\t\t");
+			ft_putstr("\t");
 			ft_putnbr(b->data);
 			b = b->next;
+			write(1, "\n", 1);
 		}
 		else
 			write(1, "\n", 1);
 	}
+	write(1, "--------\n", 9);
 	a = a_head;
 	b = b_head;
 }

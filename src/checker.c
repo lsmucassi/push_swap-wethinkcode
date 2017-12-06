@@ -6,7 +6,7 @@
 /*   By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 14:35:31 by lmucassi          #+#    #+#             */
-/*   Updated: 2017/12/05 15:49:01 by lmucassi         ###   ########.fr       */
+/*   Updated: 2017/12/06 16:50:40 by lmucassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ static int	ft_checker(t_stack **a, t_stack **b, char *flag)
 	}
 	else
 	{
-		write(1, "Error!", 6);
+		write(1, "Error\n", 6);
 		return (-1);
 	}
 	return (1);
@@ -71,36 +71,39 @@ int 		main(int ac, char **av)
 	t_stack	*a;
 	t_stack *b;
 	t_stack	*head;
-
 	char	*flag;
 	int		i;
 
 	if (ac > 1)
 	{
-		a = ft_new_stack(atoi(av[1]));
+		a = ft_new_stack(ft_atoi(av[1]));
 		b = NULL;
 		head = a;
 		i = 2;
 		while (av[i])
 		{
-			a->next = ft_new_stack(atoi(av[i]));
-			a = a->next;
+			if (is_maxint(ft_itoa(ft_atoi(av[i])), av[i]))
+			{
+				a->next = ft_new_stack(ft_atoi(av[i]));
+				a = a->next;
+			}
+			else
+				return (0);
 			i++;
 		}
 		a = head;
-		/*while (a != NULL)
-		{
-			if (!ft_isdigit(a->data))
-				return (1);
-				a = a->next;
-		}
-		a = head;*/
+		if (is_dup(a))
+			return (0);
+
 		while (1)
 		{
 			i = get_next_line(0, &flag);
 			if (i == 0)
 			{
-				write(1, "GOOD\n", 5);
+				if (ft_asort(a) && b == NULL) 
+					write(1, "OK\n", 3);
+				else
+					write(1, "KO\n", 3);
 				return (1);
 			}
 			else if (i == 1)

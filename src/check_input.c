@@ -1,39 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_asort.c                                         :+:      :+:    :+:   */
+/*   check_input.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/30 15:46:57 by lmucassi          #+#    #+#             */
-/*   Updated: 2017/12/06 14:12:03 by lmucassi         ###   ########.fr       */
+/*   Created: 2017/12/06 14:23:30 by lmucassi          #+#    #+#             */
+/*   Updated: 2017/12/06 16:49:36 by lmucassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/pushswap.h"
 
-int		ft_asort(t_stack *a)
+int		is_maxint(char *org, char *num)
 {
-	int		sort;
-	t_stack	*cpy;
+	if (ft_strcmp(org, num))
+	{
+		write(1, "Error\n", 6);
+		return (0);
+	}
+	return (1);
+}
 
-	cpy = a;
-	sort = 0;
-	if (cpy != NULL)
-	{	
-		if (cpy->next == NULL)
-			return (1);
-		while (cpy->next != NULL)
+int		is_dup(t_stack *a)
+{
+	t_stack	*list;
+	t_stack	*cmp;
+
+	list = a;
+	while (list != NULL && list->next != NULL)
+	{
+		cmp = list;
+		while (cmp->next != NULL)
 		{
-			if (cpy->data < cpy->next->data)
+			if (list->data == cmp->next->data)
 			{
-				sort = 1;
-				cpy = cpy->next;
+				write(1, "Error\n", 6);
+				return (1);
 			}
 			else
-				return (0);
+				cmp = cmp->next;
 		}
-		return (sort);
+		list = list->next;
 	}
-	return (sort);
+	return (0);
 }
