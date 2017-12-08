@@ -6,11 +6,11 @@
 /*   By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 14:44:17 by lmucassi          #+#    #+#             */
-/*   Updated: 2017/12/01 13:38:46 by lmucassi         ###   ########.fr       */
+/*   Updated: 2017/12/08 05:56:13 by lmucassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/pushswap.h"
+#include "../inc/checker.h"
 
 int		ft_rev_rotate(t_stack **s)
 {

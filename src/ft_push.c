@@ -6,11 +6,11 @@
 /*   By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 15:23:52 by lmucassi          #+#    #+#             */
-/*   Updated: 2017/12/06 13:57:24 by lmucassi         ###   ########.fr       */
+/*   Updated: 2017/12/08 05:55:47 by lmucassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/pushswap.h"
+#include "../inc/checker.h"
 
 int		ft_push(t_stack **src, t_stack **dst)
 {

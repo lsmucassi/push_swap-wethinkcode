@@ -6,11 +6,11 @@
 /*   By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 14:23:30 by lmucassi          #+#    #+#             */
-/*   Updated: 2017/12/06 16:49:36 by lmucassi         ###   ########.fr       */
+/*   Updated: 2017/12/08 06:12:02 by lmucassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/pushswap.h"
+#include "../inc/checker.h"
 
 int		is_maxint(char *org, char *num)
 {

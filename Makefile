@@ -6,7 +6,7 @@
 #    By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/29 14:27:48 by lmucassi          #+#    #+#              #
-#    Updated: 2017/12/06 15:48:03 by lmucassi         ###   ########.fr        #
+#    Updated: 2017/12/08 05:59:15 by lmucassi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,8 @@ SRC_FILE	=	ft_lstlen.c\
 				ft_rev_rotate.c\
 				ft_asort.c\
 				ft_stack.c\
-				check_input.c
+				check_input.c\
+				check_inst.c
 
 SRCS		=	$(addprefix $(SRC_PATH), $(SRC_FILE))
 
@@ -52,6 +53,7 @@ $(STACK_CHECK):
 	@echo "\033[33mProject Push_Swap Compiled\033[00m"
 
 clean:
+	@make clean -C libft/
 	@rm $(STACK_CHECK)
 #	@rm $(STACK_SWAP)
 

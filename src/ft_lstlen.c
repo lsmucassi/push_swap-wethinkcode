@@ -6,11 +6,11 @@
 /*   By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 14:43:19 by lmucassi          #+#    #+#             */
-/*   Updated: 2017/12/01 12:46:49 by lmucassi         ###   ########.fr       */
+/*   Updated: 2017/12/08 05:54:54 by lmucassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/pushswap.h"
+#include "../inc/checker.h"
 
 int		ft_lstlen(t_stack *s)
 {

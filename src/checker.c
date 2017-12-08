@@ -6,65 +6,11 @@
 /*   By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 14:35:31 by lmucassi          #+#    #+#             */
-/*   Updated: 2017/12/06 16:50:40 by lmucassi         ###   ########.fr       */
+/*   Updated: 2017/12/08 06:12:00 by lmucassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/pushswap.h"
-
-static int	ft_checker(t_stack **a, t_stack **b, char *flag)
-{
-	if (!ft_strcmp(flag, "sa"))
-	{	
-		ft_swap((*a));
-	}
-	else if (!ft_strcmp(flag, "sb"))
-	{
-		ft_swap((*b));
-	}
-	else if (!ft_strcmp(flag, "ss"))
-	{
-		ft_swap_all(a, b);
-	}
-	else if (!ft_strcmp(flag, "pb"))
-	{
-		ft_push(a, b);
-	}
-	else if (!ft_strcmp(flag, "pa"))
-	{
-		ft_push(b, a);
-	}
-	else if (!ft_strcmp(flag, "ra"))
-	{
-		ft_rotate(a);
-	}
-	else if (!ft_strcmp(flag, "rb"))
-	{
-		ft_rotate(b);
-	}
-	else if (!ft_strcmp(flag, "rr"))
-	{
-		ft_rotate_all(a, b);
-	}
-	else if (!ft_strcmp(flag, "rra"))
-	{
-		ft_rev_rotate(a);
-	}
-	else if (!ft_strcmp(flag, "rrb"))
-	{
-		ft_rev_rotate(b);
-	}
-	else if (!ft_strcmp(flag, "rrr"))
-	{
-		ft_rev_all(a, b);
-	}
-	else
-	{
-		write(1, "Error\n", 6);
-		return (-1);
-	}
-	return (1);
-}
+#include "../inc/checker.h"
 
 int 		main(int ac, char **av)
 {
@@ -94,13 +40,12 @@ int 		main(int ac, char **av)
 		a = head;
 		if (is_dup(a))
 			return (0);
-
 		while (1)
 		{
 			i = get_next_line(0, &flag);
 			if (i == 0)
 			{
-				if (ft_asort(a) && b == NULL) 
+				if (ft_ssort(a) && b == NULL) 
 					write(1, "OK\n", 3);
 				else
 					write(1, "KO\n", 3);
@@ -108,7 +53,7 @@ int 		main(int ac, char **av)
 			}
 			else if (i == 1)
 			{
-				if (ft_checker(&a, &b, flag) == 1)
+				if (check_inst(&a, &b, flag) == 1)
 					ft_printer(a, b);
 				else
 					return (-1);

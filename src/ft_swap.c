@@ -6,18 +6,18 @@
 /*   By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 14:44:03 by lmucassi          #+#    #+#             */
-/*   Updated: 2017/12/01 13:32:57 by lmucassi         ###   ########.fr       */
+/*   Updated: 2017/12/08 05:57:32 by lmucassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/pushswap.h"
+#include "../inc/checker.h"
 
 int		ft_swap(t_stack *s)
 {
 	int i;
 
 	i = 0;
-	if (ft_lstlen(s))
+	if (ft_lstlen(s) && s->next != NULL)
 	{
 		i = s->next->data;
 		s->next->data = s->data;

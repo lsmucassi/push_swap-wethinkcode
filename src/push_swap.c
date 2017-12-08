@@ -1,39 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_asort.c                                         :+:      :+:    :+:   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/30 15:46:57 by lmucassi          #+#    #+#             */
-/*   Updated: 2017/12/08 06:01:04 by lmucassi         ###   ########.fr       */
+/*   Created: 2017/12/08 05:28:40 by lmucassi          #+#    #+#             */
+/*   Updated: 2017/12/08 05:48:50 by lmucassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/checker.h"
+#include "../inc/pushswap.h"
 
-int		ft_ssort(t_stack *s)
+int		main(int ac, char **av)
 {
-	int		sort;
-	t_stack	*cpy;
 
-	cpy = s;
-	sort = 0;
-	if (cpy != NULL)
-	{	
-		if (cpy->next == NULL)
-			return (1);
-		while (cpy->next != NULL)
-		{
-			if (cpy->data < cpy->next->data)
-			{
-				sort = 1;
-				cpy = cpy->next;
-			}
-			else
-				return (0);
-		}
-		return (sort);
-	}
-	return (sort);
+	return (0);
 }
