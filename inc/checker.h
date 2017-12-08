@@ -6,7 +6,7 @@
 /*   By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 05:49:58 by lmucassi          #+#    #+#             */
-/*   Updated: 2017/12/08 06:02:00 by lmucassi         ###   ########.fr       */
+/*   Updated: 2017/12/08 14:18:28 by lmucassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ void		ft_printer(t_stack *a, t_stack *b);
 void		ft_rev_all(t_stack **a, t_stack **b);
 void		ft_swap_all(t_stack **a, t_stack **b);
 void		ft_rotate_all(t_stack **a, t_stack **b);
+void		fill_stack(t_stack *s, char **av);
 
 int			ft_lstlen(t_stack *s);
 int			ft_swap(t_stack *s);

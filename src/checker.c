@@ -6,11 +6,31 @@
 /*   By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 14:35:31 by lmucassi          #+#    #+#             */
-/*   Updated: 2017/12/08 06:12:00 by lmucassi         ###   ########.fr       */
+/*   Updated: 2017/12/08 14:17:40 by lmucassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/checker.h"
+
+/*void		fill_stack(t_stack *a, char **av)
+{
+	int		i;
+
+	i = 2;
+	while (av[i])
+	{
+		if (is_maxint(ft_itoa(ft_atoi(av[i])), av[i]))
+		{
+			a->next = ft_new_stack(ft_atoi(av[i]));
+			a = a->next;
+		}
+		else
+		{
+			write(1, "Error\n", 6);
+		}
+		i++;
+		}
+}*/
 
 int 		main(int ac, char **av)
 {
@@ -26,17 +46,7 @@ int 		main(int ac, char **av)
 		b = NULL;
 		head = a;
 		i = 2;
-		while (av[i])
-		{
-			if (is_maxint(ft_itoa(ft_atoi(av[i])), av[i]))
-			{
-				a->next = ft_new_stack(ft_atoi(av[i]));
-				a = a->next;
-			}
-			else
-				return (0);
-			i++;
-		}
+		fill_stack(a, av);
 		a = head;
 		if (is_dup(a))
 			return (0);
