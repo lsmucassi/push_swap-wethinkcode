@@ -6,7 +6,7 @@
 /*   By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 15:46:57 by lmucassi          #+#    #+#             */
-/*   Updated: 2017/12/08 06:01:04 by lmucassi         ###   ########.fr       */
+/*   Updated: 2017/12/09 17:42:30 by lmucassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ int		ft_ssort(t_stack *s)
 			else
 				return (0);
 		}
-		return (sort);
 	}
 	return (sort);
 }
