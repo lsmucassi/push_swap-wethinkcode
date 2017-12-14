@@ -6,7 +6,7 @@
 /*   By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 13:24:44 by lmucassi          #+#    #+#             */
-/*   Updated: 2017/12/09 17:06:03 by lmucassi         ###   ########.fr       */
+/*   Updated: 2017/12/14 21:32:00 by lmucassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	fill_stack(t_stack *s, char **av)
 			s = s->next;
 		}
 		else
-			write(1, "Error\n", 6);
+	 		return ;
 		i++;
 	}
 }

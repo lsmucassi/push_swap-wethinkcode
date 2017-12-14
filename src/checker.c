@@ -6,7 +6,7 @@
 /*   By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 14:35:31 by lmucassi          #+#    #+#             */
-/*   Updated: 2017/12/09 17:35:57 by lmucassi         ###   ########.fr       */
+/*   Updated: 2017/12/14 21:40:53 by lmucassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ int 		main(int ac, char **av)
 		a = ft_new_stack(ft_atoi(av[1]));
 		b = NULL;
 		head = a;
-		i = 2;
+		i = 1;
 		fill_stack(a, av);
 		a = head;
-		if (is_dup(a))
+		if (is_dup(a) || is_maxint(av[1], av[1]))
 			return (0);
 		while (1)
 		{
