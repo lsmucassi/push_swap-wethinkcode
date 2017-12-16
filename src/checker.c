@@ -6,12 +6,12 @@
 /*   By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 14:35:31 by lmucassi          #+#    #+#             */
-/*   Updated: 2017/12/14 21:40:53 by lmucassi         ###   ########.fr       */
+/*   Updated: 2017/12/15 01:43:21 by lmucassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/checker.h"
-
+/*
 int 		main(int ac, char **av)
 {
 	t_stack	*a;
@@ -35,10 +35,10 @@ int 		main(int ac, char **av)
 			i = get_next_line(0, &flag);
 			if (i == 0)
 			{
-				if (ft_ssort(a) && b == NULL) 
-					write(1, "OK\n", 3);
+			if (ft_ssort(a) && b == NULL) 
+					ft_putstr("OK\n");
 				else
-					write(1, "KO\n", 3);
+					ft_putstr("KO\n");
 				return (1);
 			}
 			else if (i == 1)
@@ -49,6 +49,6 @@ int 		main(int ac, char **av)
 					return (-1);
 			}
 		}
-		return (0);
 	}
-}
+	return (0);
+}*/

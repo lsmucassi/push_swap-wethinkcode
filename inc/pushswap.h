@@ -6,12 +6,14 @@
 /*   By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 05:51:04 by lmucassi          #+#    #+#             */
-/*   Updated: 2017/12/08 05:52:56 by lmucassi         ###   ########.fr       */
+/*   Updated: 2017/12/15 01:52:42 by lmucassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSHSWAP_H
 # define PUSHSWAP_H
 #include "checker.h"
+
+void	fix_stack(t_stack *a, t_stack *b);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/29 14:27:48 by lmucassi          #+#    #+#              #
-#    Updated: 2017/12/08 14:24:02 by lmucassi         ###   ########.fr        #
+#    Updated: 2017/12/15 01:22:46 by lmucassi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,7 @@ $(STACK_CHECK):
 	@make -C libft/
 	@echo "\033[32mCompiling Project Push_Swap...\033[00m"
 #	$(CC) -c $(CFLAGS) $(SRC_PATH)$(SRC_PS) $(LIB) -o $(STACK_PS) $(INC)
-	@$(CC) $(CFLAGS) $(SRCS) $(SRC_PATH)$(SRC_CK) $(LIB) -o $(STACK_CHECK) $(INC)
+	$(CC) $(CFLAGS) $(SRCS) $(SRC_PATH)$(SRC_CK) $(LIB) -o $(STACK_CHECK) $(INC)
 	@echo "\033[33mProject Push_Swap Compiled\033[00m"
 
 clean:
