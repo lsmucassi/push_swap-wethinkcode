@@ -6,7 +6,7 @@
 /*   By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 14:44:17 by lmucassi          #+#    #+#             */
-/*   Updated: 2017/12/09 17:51:57 by lmucassi         ###   ########.fr       */
+/*   Updated: 2017/12/19 16:19:47 by lmucassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int		ft_rev_rotate(t_stack **s)
 		while (last->next != NULL)
 			last = last->next;
 		while ((*s)->next != last)
-			(*s) =  (*s)->next;
+			(*s) = (*s)->next;
 		last->next = head;
 		(*s)->next = NULL;
 		head = last;

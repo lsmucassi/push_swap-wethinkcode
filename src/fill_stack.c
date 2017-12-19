@@ -6,7 +6,7 @@
 /*   By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 13:24:44 by lmucassi          #+#    #+#             */
-/*   Updated: 2017/12/19 14:57:25 by lmucassi         ###   ########.fr       */
+/*   Updated: 2017/12/19 15:36:09 by lmucassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	fill_stack(t_stack *s, char **av)
 {
 	int	i;
-	
+
 	i = 2;
 	while (av[i])
 	{
@@ -24,8 +24,6 @@ void	fill_stack(t_stack *s, char **av)
 			s->next = ft_new_stack(ft_atoi(av[i]));
 			s = s->next;
 		}
-		else
-	 		return ;
 		i++;
 	}
 }

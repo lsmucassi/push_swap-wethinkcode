@@ -6,7 +6,7 @@
 /*   By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/16 13:02:18 by lmucassi          #+#    #+#             */
-/*   Updated: 2017/12/16 13:46:52 by lmucassi         ###   ########.fr       */
+/*   Updated: 2017/12/19 16:20:21 by lmucassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int		ft_ssort(t_stack *s)
 	cpy = s;
 	sort = 0;
 	if (cpy != NULL)
-	{	
+	{
 		if (cpy->next == NULL)
 			return (1);
 		while (cpy->next != NULL)

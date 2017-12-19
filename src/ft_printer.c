@@ -6,11 +6,19 @@
 /*   By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 14:43:41 by lmucassi          #+#    #+#             */
-/*   Updated: 2017/12/19 14:24:56 by lmucassi         ###   ########.fr       */
+/*   Updated: 2017/12/19 16:18:30 by lmucassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/checker.h"
+
+void	header(void)
+{
+	ft_putstr("a");
+	ft_putstr(" --- ");
+	ft_putstr("b\n");
+	ft_putstr("========\n");
+}
 
 void	ft_printer(t_stack *a, t_stack *b)
 {
@@ -19,10 +27,7 @@ void	ft_printer(t_stack *a, t_stack *b)
 
 	a_head = a;
 	b_head = b;
-	write(1, "a", 1);
-	write(1, " --- ", 5);
-	write(1, "b\n", 2);
-	write(1, "========\n", 9);
+	header();
 	while (a != NULL || b != NULL)
 	{
 		if (a != NULL)
@@ -32,15 +37,14 @@ void	ft_printer(t_stack *a, t_stack *b)
 		}
 		if (b != NULL)
 		{
-			ft_putstr("\t");
 			ft_putnbr(b->data);
 			b = b->next;
-			write(1, "\n", 1);
+			ft_putstr("\n");
 		}
 		else
-			write(1, "\n", 1);
+			ft_putstr("\n");
 	}
-	write(1, "--------\n", 9);
+	ft_putstr("--------\n");
 	a = a_head;
 	b = b_head;
 }

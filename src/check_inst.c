@@ -6,13 +6,13 @@
 /*   By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/07 12:58:44 by lmucassi          #+#    #+#             */
-/*   Updated: 2017/12/19 14:21:21 by lmucassi         ###   ########.fr       */
+/*   Updated: 2017/12/19 15:29:48 by lmucassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/checker.h"
 
-int  check_inst(t_stack **a, t_stack **b, char *flag)
+int		check_inst(t_stack **a, t_stack **b, char *flag)
 {
 	if (!ft_strcmp(flag, "sa"))
 		ft_swap((*a));
@@ -37,9 +37,6 @@ int  check_inst(t_stack **a, t_stack **b, char *flag)
 	else if (!ft_strcmp(flag, "rrr"))
 		ft_rev_all(a, b);
 	else
-	{
-		write(1,"Error\n", 6);
 		return (0);
-	}
 	return (1);
 }

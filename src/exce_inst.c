@@ -1,36 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   exce_inst.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/29 14:35:31 by lmucassi          #+#    #+#             */
-/*   Updated: 2017/12/19 15:56:28 by lmucassi         ###   ########.fr       */
+/*   Created: 2017/12/19 15:39:31 by lmucassi          #+#    #+#             */
+/*   Updated: 2017/12/19 16:11:12 by lmucassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/checker.h"
 
-int		main(int ac, char **av)
+int		exce_inst(t_stack *a, t_stack *b)
 {
-	t_stack	*a;
-	t_stack *b;
-	t_stack	*head;
+	int		i;
+	char	*flag;
 
-	if (ac == 2)
+	i = 0;
+	while (1)
 	{
+		i = get_next_line(0, &flag);
+		if (i == 0)
+		{
+			(ft_ssort(a) && b == NULL) ? ft_putstr("OK\n") : ft_putstr("KO\n");
+			return (1);
+		}
+		else if (i == 1)
+		{
+			if (check_inst(&a, &b, flag))
+				ft_printer(a, b);
+			else
+			{
+				ft_putstr("Error\n");
+				return (-1);
+			}
+		}
 	}
-	else if (ac > 1)
-	{
-		a = ft_new_stack(ft_atoi(av[1]));
-		b = NULL;
-		head = a;
-		fill_stack(a, av);
-		a = head;
-		if (is_dup(a))
-			return (0);
-		exce_inst(a, b);
-	}
-	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 14:23:30 by lmucassi          #+#    #+#             */
-/*   Updated: 2017/12/19 15:07:55 by lmucassi         ###   ########.fr       */
+/*   Updated: 2017/12/19 15:35:28 by lmucassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 
 int		is_maxint(char *org, char *num)
 {
-	char *MAXI = "-2147483647";
-
-	if (ft_strcmp(org, num) || ft_atoi(num) > ft_atoi(MAXI))
+	if (ft_strcmp(org, num))
 	{
 		ft_putstr("Error, input exceeds max integer\n");
 		exit(0);

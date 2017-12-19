@@ -6,7 +6,7 @@
 #    By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/29 14:27:48 by lmucassi          #+#    #+#              #
-#    Updated: 2017/12/19 09:52:37 by lmucassi         ###   ########.fr        #
+#    Updated: 2017/12/19 15:52:07 by lmucassi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,7 @@ SRC_FILE	=	ft_lstlen.c\
 				ft_stack.c\
 				check_input.c\
 				fill_stack.c\
+				exce_inst.c\
 				check_inst.c
 
 SRCS		=	$(addprefix $(SRC_PATH), $(SRC_FILE))
@@ -64,7 +65,6 @@ fclean: clean
 re:	fclean all
 
 norm:
-	@normenette .src/*
-	@normenette main.c
+	@norminette src/*
 
 .PHONY: clean fclean all re

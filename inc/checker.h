@@ -6,7 +6,7 @@
 /*   By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 05:49:58 by lmucassi          #+#    #+#             */
-/*   Updated: 2017/12/15 01:43:41 by lmucassi         ###   ########.fr       */
+/*   Updated: 2017/12/19 15:55:24 by lmucassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include "../libft/inc/libft.h"
+
+# define MAXI "-2147483647"
 
 typedef struct		s_stack
 {
@@ -32,6 +34,7 @@ void		ft_swap_all(t_stack **a, t_stack **b);
 void		ft_rotate_all(t_stack **a, t_stack **b);
 void		fill_stack(t_stack *s, char **av);
 
+int			exce_inst(t_stack *a, t_stack *b);
 int			ft_lstlen(t_stack *s);
 int			ft_swap(t_stack *s);
 int			ft_rev_rotate(t_stack **s);
