@@ -6,12 +6,12 @@
 /*   By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 14:35:31 by lmucassi          #+#    #+#             */
-/*   Updated: 2017/12/15 01:43:21 by lmucassi         ###   ########.fr       */
+/*   Updated: 2017/12/19 14:47:47 by lmucassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/checker.h"
-/*
+
 int 		main(int ac, char **av)
 {
 	t_stack	*a;
@@ -22,13 +22,12 @@ int 		main(int ac, char **av)
 
 	if (ac > 1)
 	{
-		a = ft_new_stack(ft_atoi(av[1]));
+		a =  ft_new_stack(ft_atoi(av[1]));
 		b = NULL;
 		head = a;
-		i = 1;
 		fill_stack(a, av);
 		a = head;
-		if (is_dup(a) || is_maxint(av[1], av[1]))
+		if (is_dup(a))
 			return (0);
 		while (1)
 		{
@@ -43,7 +42,7 @@ int 		main(int ac, char **av)
 			}
 			else if (i == 1)
 			{
-				if (check_inst(&a, &b, flag) == 1)
+				if (check_inst(&a, &b, flag))
 					ft_printer(a, b);
 				else
 					return (-1);
@@ -51,4 +50,4 @@ int 		main(int ac, char **av)
 		}
 	}
 	return (0);
-}*/
+}
