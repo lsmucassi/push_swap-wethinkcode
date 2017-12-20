@@ -6,7 +6,7 @@
 /*   By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 13:24:44 by lmucassi          #+#    #+#             */
-/*   Updated: 2017/12/19 15:36:09 by lmucassi         ###   ########.fr       */
+/*   Updated: 2017/12/20 17:23:27 by lmucassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,10 @@ void	fill_stack(t_stack *s, char **av)
 		i++;
 	}
 }
+/*
+void	arg_str(t_stack *a, char **av)
+{
+	char **str;
+
+	str = ft_strsplit(av[1], ' ');
+	while (ft_strlen(str)*/
