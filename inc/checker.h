@@ -6,7 +6,7 @@
 /*   By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 05:49:58 by lmucassi          #+#    #+#             */
-/*   Updated: 2017/12/19 15:55:24 by lmucassi         ###   ########.fr       */
+/*   Updated: 2017/12/21 14:44:16 by lmucassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,5 @@ int			ft_ssort(t_stack *s);
 int			is_maxint(char *org, char *num);
 int			is_dup(t_stack	*a);
 int			check_inst(t_stack **a, t_stack **b, char *flag);
-
+int			multdi_len(char **str);
 #endif

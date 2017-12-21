@@ -6,7 +6,7 @@
 /*   By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 14:35:31 by lmucassi          #+#    #+#             */
-/*   Updated: 2017/12/20 17:34:22 by lmucassi         ###   ########.fr       */
+/*   Updated: 2017/12/21 14:43:49 by lmucassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@ int		main(int ac, char **av)
 	{
 		ft_putstr("Working with one ARG string\n");
 		str = ft_strsplit(av[1], ' ');
-		size_t i = ft_strlen(*str);
+	
+		size_t i = multdi_len(str);
+		/*	size_t i = ft_strlen(*str);*/
 		while (i > 0)
 		{
 			ft_putstr(*str++);

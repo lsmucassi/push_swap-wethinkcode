@@ -6,7 +6,7 @@
 #    By: lmucassi <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/29 14:27:48 by lmucassi          #+#    #+#              #
-#    Updated: 2017/12/20 16:24:05 by lmucassi         ###   ########.fr        #
+#    Updated: 2017/12/21 14:44:38 by lmucassi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,7 @@ SRC_FILE	=	ft_lstlen.c\
 				check_input.c\
 				fill_stack.c\
 				exce_inst.c\
+				multdi_len.c\
 				check_inst.c
 
 SRCS		=	$(addprefix $(SRC_PATH), $(SRC_FILE))
